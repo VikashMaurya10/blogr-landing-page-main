@@ -1,0 +1,40 @@
+.header-section {
+    background: $background-gardiant;
+    border-bottom-left-radius: 100px;
+    position: relative;
+
+    &__inner-header {
+        background: no-repeat url("../images/bg-pattern-intro-desktop.svg");
+        background-size: 170%;
+        background-position: left center;
+        min-height: 37.5rem; //600px;
+        text-align: center;
+
+        h1 {
+            color: $White;
+            font-size: 3rem; //45px
+        }
+
+        p {
+            margin: 2.375rem 0 3.375rem 0; //38px 54px
+        }
+
+        ul {
+            :first-child:hover {
+
+                background-color: rgba(255, 255, 255, 0.27) !important;
+                color: $White !important;
+            }
+
+            :last-child {
+                border: 1px solid $White;
+
+                &:hover {
+                    background-color: $White !important;
+                    color: $light-red !important;
+                }
+            }
+        }
+
+    }
+}

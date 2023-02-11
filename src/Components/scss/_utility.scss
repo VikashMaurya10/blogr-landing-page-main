@@ -1,0 +1,35 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-f {
+    display: flex;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
+.jc-sb {
+    justify-content: space-between;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.g-p {
+    gap: 5px;
+}
+
+.G-P {
+    gap: 10px;
+}
+.b-r{
+    border-radius: 5px;
+}

@@ -1,12 +1,142 @@
 .header-section {
-    background: $background-gardiant;
-    border-bottom-left-radius: 100px;
     position: relative;
+    min-height: 100vh;
+
+    header {
+        position: absolute;
+        width: 100%;
+        margin: 49px 0;
+
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            height: 50px;
+
+            .ul {
+                width: 100%;
+
+                hr {
+                    display: none;
+                }
+            }
+
+            >img {
+                margin-right: 4.2rem;
+            }
+
+            ul {
+                .Menu {
+                    gap: 2rem;
+                }
+
+                .menu {
+                    position: relative;
+                    min-width: fit-content;
+
+                    .title,
+                    li {
+                        cursor: pointer;
+                    }
+
+                    .title {
+                        padding: 1rem 0;
+                        font-weight: 700;
+                        color: $Grayish-blue;
+                        font-size: 1rem;
+                        font-family: 'Ubuntu', system-ui;
+
+                        &:hover {
+                            text-decoration: underline 2px;
+                        }
+                    }
+
+                    .link {
+                        position: absolute;
+                        height: 0px;
+                        background-color: $White;
+                        width: 10.5rem; //168px;
+                        text-align: left;
+                        overflow: hidden;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        transition: all 0.3s ease-in-out;
+
+                        li {
+                            font-weight: 400;
+                            font-family: 'Ubuntu', system-ui;
+
+                            &:not(:first-child) {
+                                margin-top: 0.5rem;
+                            }
+
+                            a {
+                                color: $Very-dark-blue;
+                            }
+
+                            &:hover {
+                                font-weight: 600;
+                            }
+
+                        }
+                    }
+
+                    .showLink {
+                        height: fit-content;
+                        padding: 2.187rem 1.5rem;
+                    }
+                }
+
+            }
+
+            .ctaBtn {
+                :first-child:hover {
+                    background-color: $White !important;
+                    color: $light-red;
+
+                }
+
+                :last-child:hover {
+                    background-color: rgba(255, 255, 255, 0.27) !important;
+                    color: $White !important;
+                }
+            }
+
+            .ham {
+                display: none;
+                cursor: pointer;
+
+                img {
+                    width: 1.8rem;
+                    height: 1.2rem;
+                    color: $White;
+                }
+
+                .hideHam {
+                    display: none;
+                }
+
+                .close {
+                    display: none;
+                }
+
+                .showClose {
+                    display: block;
+                }
+            }
+
+            .rotateArrow {
+                transition: all 0.3s ease;
+                transform: rotate(180deg);
+            }
+        }
+    }
 
     &__inner-header {
-        background: no-repeat url("../images/bg-pattern-intro-desktop.svg");
-        background-size: 170%;
-        background-position: left center;
+        border-bottom-left-radius: 100px;
+        background: no-repeat url("../images/bg-pattern-intro-desktop.svg"), $background-gardiant;
+        background-size: 200%;
+        background-position-y: center;
+        background-position-x: calc(2% - 18rem); //-19rem;
         min-height: 37.5rem; //600px;
         text-align: center;
 
@@ -20,8 +150,8 @@
         }
 
         ul {
-            :first-child:hover {
 
+            :first-child:hover {
                 background-color: rgba(255, 255, 255, 0.27) !important;
                 color: $White !important;
             }

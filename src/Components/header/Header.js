@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import Nav from "./Nav";
+import backSvg from "../../images/bg-pattern-intro-desktop.svg";
 
 const Header = () => {
   return (

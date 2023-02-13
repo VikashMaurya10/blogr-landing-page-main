@@ -37,7 +37,11 @@
 
   body {
       font-family: "Overpass", "sans-serif";
+
       // background: $body-background-gardiant;
+      &::-webkit-scrollbar {
+          display: none;
+      }
   }
 
   img {
@@ -73,19 +77,18 @@
   }
 
   .btn {
+
       color: $Grayish-blue;
-      width:8.562rem;// 137px;
-      height:3rem;// 48px;
+      width: 8.562rem; // 137px;
+      height: 3rem; // 48px;
       border-radius: 50px;
       font-weight: 700;
       font-size: 0.875rem; // 14px;
       cursor: pointer;
       border: none;
+      transition: hover 0.3s ease-in-out;
 
       &:not(:last-child) {
           margin-right: 1rem;
       }
-  }
-  .b{
-    border: 1px solid white;
   }

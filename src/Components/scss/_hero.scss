@@ -1,0 +1,15 @@
+.hero-section {
+    min-height: 100vh;
+    overflow: hidden;
+
+    &__inner {
+        transform: translate(12rem, 0);
+        gap: 11rem;
+
+        >picture {
+            min-width: 50%;
+        }
+
+    }
+
+}

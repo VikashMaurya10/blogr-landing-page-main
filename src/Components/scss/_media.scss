@@ -1,5 +1,14 @@
-@media (max-width:964px) {
+@media (max-width:990px) {
     .header-section {
+        overflow: hidden;
+
+        &__inner-header {
+            background: no-repeat url("../images/bg-pattern-intro-mobile.svg"), $background-gardiant;
+            background-size: calc(139% + 80rem);
+            background-position-x: -38rem;
+            background-position-y: center;
+        }
+
         h1 {
             font-size: 2.5rem !important;
         }
@@ -12,76 +21,91 @@
             width: 7.562rem; //121px
             height: 2.625rem; //48px
         }
-    }
 
-    nav {
-        position: relative;
+        nav {
+            position: relative;
 
-        .ham {
-            display: block !important;
+            .ham {
+                display: block !important;
+            }
+
+            .ul {
+                position: absolute;
+                max-width: 80%;
+                flex-direction: column;
+                background-color: $White;
+                left: 50%;
+                transform: translate(-50%, 4rem);
+                border-radius: 5px;
+                height: fit-content;
+
+                li {
+                    text-align: center;
+                }
+
+                .Menu {
+                    width: 100%;
+                }
+
+                .menu {
+                    text-align: center;
+                    width: 90%;
+                }
+
+                .link {
+                    position: static !important;
+                    min-width: 90% !important;
+                    background-color: $Grayish-blue !important;
+                    transform: translate(5%, 0) !important;
+                }
+
+                hr {
+                    display: block !important;
+                    margin-top: 1rem;
+                    border: 1px solid $Grayish-blue;
+                    min-width: 81%;
+                }
+            }
+
+            .Menu,
+            .ctaBtn {
+                display: none;
+                gap: 0 !important;
+            }
+
+            .ctaBtn {
+                button {
+                    margin-top: 1rem;
+                }
+
+                :first-child,
+                :first-child:hover {
+                    color: $Very-dark-black-blue !important;
+                }
+
+                :last-child {
+                    background: $background-gardiant;
+                    color: $White !important;
+                }
+            }
+
         }
 
-        .ul {
-            position: absolute;
-            max-width: 80%;
+        .navshowUl {
+            padding: 2.25rem 0;
+        }
+
+        .navshow {
+            display: flex !important;
             flex-direction: column;
-            background-color: $White;
-            left: 50%;
-            transform: translate(-50%, 4rem);
-            border-radius: 5px;
-            height: fit-content;
-
-            li {
-                text-align: center;
-            }
-
-            .Menu {
-                width: 100%;
-            }
-
-            .menu {
-                text-align: center;
-                width: 90%;
-            }
-
-            .link {
-                position: static !important;
-                min-width: 90% !important;
-                background-color: $Grayish-blue !important;
-                transform: translate(5%, 0) !important;
-            }
         }
-
-        .Menu,
-        .ctaBtn {
-            display: none;
-            gap: 0 !important;
-        }
-
-        .ctaBtn {
-            button {
-                margin-top: 1rem;
-            }
-
-            :first-child,
-            :first-child:hover {
-                color: $Very-dark-black-blue !important;
-            }
-
-            :last-child {
-                background: $background-gardiant;
-                color: $White !important;
-            }
-        }
-
     }
 
-    .navshowUl {
-        padding: 2.25rem 0;
-    }
-
-    .navshow {
-        display: flex !important;
-        flex-direction: column;
+    // hero section
+    .hero-section {
+        &__inner {
+            flex-direction: column-reverse;
+            transform: translate(0, 0);
+        }
     }
 }
